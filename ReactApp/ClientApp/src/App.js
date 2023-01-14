@@ -6,6 +6,7 @@ import { FetchData } from './components/FetchData';
 import { Product } from './components/Product';
 import { Admin } from './components/Admin';
 import { Create } from './components/Create';
+import { Edit } from './components/Edit';
 import { Counter } from './components/Counter';
 
 import './custom.css'
@@ -21,7 +22,8 @@ export default class App extends Component {
         <Route path='/fetch-data' component={FetchData} />
         <Route path='/product' component={Product} />
         <Route path='/admin' component={Admin} />
-         <Route path='/create' component={Create} />
+        <Route path='/create' component={Create} />
+        <Route path='/edit' component={Edit} />
       </Layout>
     );
   }

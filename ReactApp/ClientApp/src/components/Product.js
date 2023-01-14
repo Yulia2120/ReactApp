@@ -30,15 +30,15 @@ export class Product extends Component {
     static renderProductCard(products)
             {
                 return (
-                    <Row className="mt-5">
-                        <Col className="col-4">
                   
+                    <Row className="mt-5">
                         {
                             products.map((item => (
+                        <Col className="col-3 mb-4">
                                         <Card key={item.prodId}
                                     style={{
                                         width: '18rem'
-                                    }}>
+                                    }} className="box-shadow">
 
                                     <img
                                         alt="Sample"
@@ -52,7 +52,7 @@ export class Product extends Component {
                                             tag="h6">
                                             {item.descrLi}
                                         </CardSubtitle>
-                                        <CardText>
+                                        <CardText className="trim-text">
                                             {item.description}
                                         </CardText>
                                         <CardText>
@@ -64,11 +64,11 @@ export class Product extends Component {
                                     </CardBody>
                                         </Card>
                                   
+                                        </Col>
                             ))
                         )}
-                                        </Col>
-
                                     </Row>
+
                  
 
                 )

@@ -38,8 +38,8 @@ export class Admin extends Component {
                             <td>{product.imgUrl}</td>
                             <td>
                                 <Button tag={Link} to="/create" color="success" className="mt-3 text-white">Add</Button>
-                                <Button color="primary" className="mt-3">Edit</Button>
-                                <Button color="danger" className="mt-3">Delit</Button>
+                                <Button tag={Link} to="/edit" color="info" className="mt-3 text-white">Edit</Button>
+                                <Button color="danger" className="mt-3 text-white">Delit</Button>
 
                             </td>
                         </tr>
