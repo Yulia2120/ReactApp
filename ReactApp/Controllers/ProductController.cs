@@ -31,6 +31,7 @@ namespace ReactApp.Controllers
         }
 
         [HttpPost]
+        [Route("CreateAsync")]
         public async Task<Product> CreateAsync(Product item)
         {
             await _context.Set<Product>().AddAsync(item);

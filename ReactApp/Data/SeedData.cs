@@ -13,7 +13,7 @@ namespace ReactApp.Data
                 context.Products.AddRange(
                                 new Product
                                 {
-                                    Title = "НОЖ SKIF ADVENTURE II BSW ORANGE",
+                                    Title = "Нож SKIF Boy Orange",
                                     DescrLi = "Марка стали/Материал клинка: 9Cr18MoV",
                                     Description = "Нож SKIF Adventure II - это новое поколение одной из лучших моделей 400-й серии. " +
                                     "Неизменной осталась форма и назначение ножа - это все тот же EDC на все случаи жизни, применимый, однако, в туризме и других аутдор-активностях. " +
@@ -26,7 +26,7 @@ namespace ReactApp.Data
                                 },
                                 new Product
                                 {
-                                    Title = "НОЖ SKIF ADVENTURE II SW ORANGE",
+                                    Title = "Нож SKIF Boy Orange",
                                     DescrLi = "Марка стали/Материал клинка: 9Cr18MoV",                                    
                                     Description = "Нож SKIF Adventure II - это новое поколение одной из лучших моделей 400-й серии." +
                                     " Неизменной осталась форма и назначение ножа - это все тот же EDC на все случаи жизни, применимый, однако, в туризме и других аутдор-активностях." +
