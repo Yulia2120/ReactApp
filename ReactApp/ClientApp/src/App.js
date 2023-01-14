@@ -5,6 +5,7 @@ import { Home } from './components/Home';
 import { FetchData } from './components/FetchData';
 import { Product } from './components/Product';
 import { Admin } from './components/Admin';
+import { Create } from './components/Create';
 import { Counter } from './components/Counter';
 
 import './custom.css'
@@ -20,6 +21,7 @@ export default class App extends Component {
         <Route path='/fetch-data' component={FetchData} />
         <Route path='/product' component={Product} />
         <Route path='/admin' component={Admin} />
+         <Route path='/create' component={Create} />
       </Layout>
     );
   }

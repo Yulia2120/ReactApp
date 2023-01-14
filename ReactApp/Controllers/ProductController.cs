@@ -21,40 +21,41 @@ namespace ReactApp.Controllers
         public async Task<List<Product>> GetProductsAsync()
         {
             return await _context.Products.ToListAsync();
-            //using (var db = new Context())
-            //{
-            //    return await db.Products.ToListAsync();
-            //}
+           
         }
-        //public async Task<IEnumerable<Product>> GetAsync()
-        //{
-        //    return await ProductRepo.GetProductsAsync();
-        //}
 
-        //[HttpGet("id")]
-        //public async Task<Product> DetailsId(int id)
-        //{
-        //   return await ProductRepo.GetProductByIdAsync(id);
+        [HttpGet("id")]
+        public async Task<Product> GetByIdAsync(int id)
+        {
+            return await _context.Set<Product>().FindAsync(id);
+        }
 
-        //}
-        //[HttpPost]
-        //public async Task<bool> CreateAsync(Product product)
-        //{
-        //    return await ProductRepo.CreateProductAsync(product);
-        //}
+        [HttpPost]
+        public async Task<Product> CreateAsync(Product item)
+        {
+            await _context.Set<Product>().AddAsync(item);
+            await _context.SaveChangesAsync();
+            return item;
+        }
 
-        //[HttpPost]
-        //public async Task<bool> UpProduct(Product productToUpdate)
-        //{
-        //   return await ProductRepo.UpdateProductAsync(productToUpdate);
-            
-        //}
+        [HttpPost]
+        public async Task<Product> UpdateAsync(Product item)
+        {
+            _context.Set<Product>().Update(item);
+            await _context.SaveChangesAsync();
+            return item;
+        }
+       
+        [HttpPost]
+        public async Task<Product> DeleteAsync(Product item)
+        {
 
-        //[HttpPost]
-        //public async Task<bool> DeleteAsync(int id)
-        //{
-        //  return  await ProductRepo.DeleteProductAsync(id);
-        //}
+            _context.Set<Product>().Remove(item);
+            await _context.SaveChangesAsync();
+
+            return item;
+        }
+
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿import React, { Component } from 'react';
 import { Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 export class Admin extends Component {
     static displayName = Admin.name;
@@ -36,7 +37,7 @@ export class Admin extends Component {
                             <td>{product.quantity}</td>
                             <td>{product.imgUrl}</td>
                             <td>
-                                <Button color="success" className="mt-3">Add</Button>
+                                <Button tag={Link} to="/create" color="success" className="mt-3 text-white">Add</Button>
                                 <Button color="primary" className="mt-3">Edit</Button>
                                 <Button color="danger" className="mt-3">Delit</Button>
 
